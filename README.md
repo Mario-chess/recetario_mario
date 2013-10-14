@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Actividades de Fin de Semama
 
 * Se realizo un programa de Recetario,siguiendo la guia de Maestros del Web.
@@ -25,3 +26,9 @@ Una vez configurado el proyecto se procedio con la clonacion del Proyecto desde 
 
 Nota: Es necesario limitar el tamaño de las imagenes, ya que se tarda demasiado en cargar...
 Nota: Es necesario optimizar para hacer todo mas veloz.
+=======
+recetario_mario
+===============
+
+Servicio que correo en pythonanywhere
+>>>>>>> c3ba10305f8fc2505dde5b60e6cc2de9f84095b1
