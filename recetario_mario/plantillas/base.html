@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>
+		Recetario - {% block titulo %} {% endblock %}
+	</title>
+	<link rel="stylesheet" href='{{ STATIC_URL }}css/base.css'>
+	<style>
+		{% block estilos %} {% endblock %}
+	</style>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-44770882-1', 'pythonanywhere.com');
+      ga('send', 'pageview');
+    </script>
+</head>
+<body>
+	<header>
+		{% block encabezado %} {% endblock %}
+		<nav>
+			<ul>
+				<li><a href="/">Inicio</a></li>
+				<li><a href="/usuarios">Usuario Registrados</a></li>
+				<li><a href="/recetas">Recetas</a></li>
+				<li><a href="/comenta">Comenta</a></li>
+				<li><a href="/contacto">Contactanos</a></li>
+				<li><a href="/cerrar">Cerrar sesion</a></li>
+
+			</ul>
+		</nav>
+	</header>
+
+	<section class="contenido">
+		{% block contenido %} {% endblock %}
+	</section>
+
+	<footer>
+		{% block pie_pagina %} {% endblock %}
+	</footer>
+
+</body>
+</html>
