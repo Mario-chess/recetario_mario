@@ -155,6 +155,6 @@ LOGGING = {
 #Configuraciones para enviar mensajes usando gmail
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'mario.cloud.start@gmail.com'
-EMAIL_HOST_PASSWORD = 'jugarajedrezSE'
+EMAIL_HOST_USER = 'correo.sender.2013@gmail.com'
+EMAIL_HOST_PASSWORD = 'correo.sender'
 EMAIL_PORT = 587

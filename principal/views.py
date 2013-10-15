@@ -23,22 +23,24 @@ def inicio (request):
 	recetas = Receta.objects.all()
 	return render_to_response('inicio.html', {'recetas':recetas}, context_instance=RequestContext(request))
 
+@login_required(login_url='/ingresar')
 def usuarios (request):
 	usuarios = User.objects.all()
 	recetas = Receta.objects.all()
 	return render_to_response('usuarios.html', {'recetas':recetas, 'usuarios':usuarios}, context_instance=RequestContext(request))
 
+@login_required(login_url='/ingresar')
 def lista_recetas (request):
 	recetas = Receta.objects.all()
 	return render_to_response('recetas.html', {'recetas': recetas}, context_instance=RequestContext(request))
 
-
+@login_required(login_url='/ingresar')
 def detalle_receta (request, id_receta):
 	dato = get_object_or_404(Receta, pk=id_receta)
-	comentarios = Comentario.objects.filter(receta=dato) 
+	comentarios = Comentario.objects.filter(receta=dato)
 	return render_to_response('receta.html', {'receta': dato, 'comentarios':comentarios}, context_instance=RequestContext(request))
 
-
+@login_required(login_url='/ingresar')
 def contacto(request):
     if request.method=='POST':
         formulario = ContactoForm(request.POST)
@@ -46,14 +48,14 @@ def contacto(request):
             titulo = 'Mensaje desde el recetario'
             contenido = formulario.cleaned_data['mensaje'] + "\n"
             contenido += 'Comunicarse a: ' + formulario.cleaned_data['correo']
-            correo = EmailMessage(titulo, contenido, to=['mario.cloud.start@gmail.com'])
+            correo = EmailMessage(titulo, contenido, to=['correo.sender.2013@gmail.com'])
             correo.send()
             return HttpResponseRedirect('/')
     else:
         formulario = ContactoForm()
     return render_to_response('contactoform.html',{'formulario':formulario}, context_instance=RequestContext(request))
 
-
+@login_required(login_url='/ingresar')
 def nueva_receta(request):
     if request.method=='POST':
         formulario = RecetaForm(request.POST, request.FILES)
@@ -64,7 +66,7 @@ def nueva_receta(request):
         formulario = RecetaForm()
     return render_to_response('recetaform.html',{'formulario':formulario}, context_instance=RequestContext(request))
 
-
+@login_required(login_url='/ingresar')
 def nuevo_comentario(request):
     if request.method=='POST':
         formulario = ComentarioForm(request.POST)
@@ -75,7 +77,7 @@ def nuevo_comentario(request):
         formulario = ComentarioForm()
     return render_to_response('comentarioform.html',{'formulario':formulario}, context_instance=RequestContext(request))
 
-
+@login_required(login_url='/ingresar')
 def nuevo_usuario(request):
     if request.method=='POST':
         formulario = UserForm(request.POST, request.FILES)
