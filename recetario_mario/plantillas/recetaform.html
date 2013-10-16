@@ -4,15 +4,15 @@
 	Nueva Receta
 {% endblock %}
 
-{% block encabezado %} 
+{% block encabezado %}
 	<h1>Nueva Receta</h1>
 {% endblock %}
 
 
 {% block contenido %}
-	
+
 	{% comment %}
-	<form id='formulario' method='post' action=''> 
+	<form id='formulario' method='post' action=''>
 	Con un form normal no se pueden cargar imagenes
 	Por tal razon se utiliza "enctype='multipart/form-data'"
 	{% endcomment %}
@@ -21,6 +21,6 @@
 
 		{% csrf_token %}
 		<table>{{formulario}}</table>
-		<p><input type='submit' value='Confirmar'/></p>
+    	<p><input id="boton_form" type='submit' value='Crear'/></p>
 	</form>
 {% endblock %}

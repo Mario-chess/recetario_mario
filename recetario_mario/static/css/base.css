@@ -1,30 +1,76 @@
 /* algunos ejemplos con CSS */
-body, header, footer, div, h1, h2, ul, li, a 
-{ 
-	margin:0; padding:0;
+body, header, footer, div, h1, h2, ul, li, a
+{
+    margin:0; padding:0;
 }
 
-header 
+body
 {
-	background-color:#008500;
+	background-color: #C37B4B;
+
+}
+
+header
+{
+	background-color:#A3AE6A;
 	color:#ffffff;
+}
+
+nav
+{
+	bottom: 0;
+	color: #EEE;
+	font-size: 1.5em;
+	left: 0;
+	padding: 1em 0;
+	width: 100%;
+}
+
+nav ul
+{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+nav ul li
+{
+	display: inline-block;
 }
 
 nav ul li a
 {
-	text-decoration:none;
-	color:#fff;
-	margin:10px;
+	background: #50592E;
+	border-radius: 0.5em;
+	color: white;
+	display: inline-block;
+	margin: 0 1em 0 0;
+	padding: 0.5em 1em;
+	text-decoration: none;
+	transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+}
+
+nav ul li a:hover
+{
+	background: #25222B;
+	color: #fffaaa;
+	-webkit-transform: scale(1.2) rotate(-5deg);
+	-moz-transform: scale(1.2) rotate(-5deg);
 }
 
 table
 {
-	background-color: #5f5fff;
+	background-color: #1B4328;
+	color:#1B4328;
+	margin: 0 2% 1em 35%;
+	text-align: center;
+	width: 30%;
 }
 
 table input
 {
-	background-color: #cccfff;
+	background-color: #B75D23;
 	border-radius: 0.4em;
 }
 
@@ -38,19 +84,67 @@ table th
 	background-color: #fffaaa;
 }
 
+#boton_form
+{
+	background-color: #B29A7E;
+	border-radius: 2em;
+	font-size: 1.2em;
+	margin: 0 2% 7em 45%;
+	width: 8%;
+	transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+}
 
-.activo 
-{ 
-  font-weight: bold; 
+#boton_form:hover
+{
+	background-color: #5F4B4C;
+	border-radius: 1em;
+	font-size: 1.2em;
+	margin: 0 2% 7em 45%;
+	width: 8%;
+	-webkit-transform: scale(1.2) rotate(-5deg);
+	-moz-transform: scale(1.2) rotate(-5deg);
+}
+
+.contenido a
+{
+	color: #FBFBFB;
+	font-family: Arial;
+	font-size: 1em;
+	margin: 0 2% 7em 45%;
+}
+
+.contenido ul li
+{
+	display: inline-block;
+}
+
+.contenido ul li a
+{
+    color: #FBFBFB;
+	font-family: Arial;
+	font-size: 70%;
+	margin: 0 2% 7em 23%;
+}
+
+.contenido ul li img
+{
+    width:250px;
+	height:250px;
+}
+
+.activo
+{
+  font-weight: bold;
 
 }
 
-.impar 
-{ 
-	background-color:#90EE90; 
+.impar
+{
+	background-color:#B75D23;
 }
 
-.par 
-{ 
-	background-color:#5ACC5A; 
+.par
+{
+	background-color:#fffaaa;
 }

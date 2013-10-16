@@ -9,7 +9,7 @@
 	<h1>Colaboradores</h1>
 {% endblock %}
 
-{% block contenido %}
+{% block contenido_lista %}
 	<a href="/usuario/nuevo/">Agregar Nuevo Usuario</a><br><br>
 
 	<ul>
@@ -24,7 +24,7 @@
 					{% if item.usuario == dato %}
 					<li>
 						{{ item }}
-					</li>					
+					</li>
 					{% endif %}
 
 					{% empty %}
@@ -40,4 +40,4 @@
 		</li>
 		{% endfor %}
 	</ul>
-{% endblock %}	
+{% endblock %}

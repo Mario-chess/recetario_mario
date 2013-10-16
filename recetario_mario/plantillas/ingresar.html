@@ -4,7 +4,7 @@
 	Ingresa al sistema
 {% endblock %}
 
-{% block encabezado %} 
+{% block encabezado %}
 	<h1>Ingresa</h1>
 {% endblock %}
 
@@ -12,6 +12,6 @@
 	<form id='formulario' method='post' action=''>
 		{% csrf_token %}
 		<table>{{formulario}}</table>
-		<p><input type='submit' value='Ingresar'/></p>
+    	<p><input id="boton_form" type='submit' value='Ingresar'/></p>
 	</form>
 {% endblock %}

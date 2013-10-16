@@ -4,7 +4,7 @@
 	Contactanos
 {% endblock %}
 
-{% block encabezado %} 
+{% block encabezado %}
 	<h1>Comunícate con nosotros</h1>
 {% endblock %}
 
@@ -12,6 +12,6 @@
 	<form id='formulario' method='post' action=''>
 		{% csrf_token %}
 		<table>{{formulario}}</table>
-		<p><input type='submit' value='Confirmar'/></p>
+    	<p><input id="boton_form" type='submit' value='Enviar'/></p>
 	</form>
 {% endblock %}
