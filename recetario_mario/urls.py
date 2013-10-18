@@ -7,6 +7,9 @@ from django.conf import settings
 admin.autodiscover()
 
 urlpatterns = patterns('',
+
+    (r'^grappelli/', include('grappelli.urls')), # grappelli URLS
+
     url(r'^$','principal.views.inicio'),
 
 	url(r'^recetas/','principal.views.lista_recetas'),
